@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sf-Budgeteer-Api", "Sf-Budgeteer-Api\Sf-Budgeteer-Api.csproj", "{DB53CAFC-C583-47B1-8924-A8AB8DDD80CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB53CAFC-C583-47B1-8924-A8AB8DDD80CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB53CAFC-C583-47B1-8924-A8AB8DDD80CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB53CAFC-C583-47B1-8924-A8AB8DDD80CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB53CAFC-C583-47B1-8924-A8AB8DDD80CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15574E64-5CB9-463E-8A46-8C217B746DD9}
+	EndGlobalSection
+EndGlobal
