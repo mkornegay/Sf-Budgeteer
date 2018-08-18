@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Sf_Budgeteer_Infrastructure</RootNamespace>
+  </PropertyGroup>
+
+</Project>

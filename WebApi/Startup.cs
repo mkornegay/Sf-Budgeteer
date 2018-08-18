@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Sf_Budgeteer_Api
+namespace Sf_Budgeteer_WebApi
 {
     public class Startup
     {
