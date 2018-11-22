@@ -1,9 +1,7 @@
-﻿using Sf_Budgeteer_ApplicationCore.Entities;
-using System;
+﻿using Sf.Budgeteer.ApplicationCore.Entities;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Sf_Budgeteer_ApplicationCore.Interfaces
+namespace Sf.Budgeteer.ApplicationCore.Interfaces
 {
     public interface IRepository<T> where T : BaseEntity
     {

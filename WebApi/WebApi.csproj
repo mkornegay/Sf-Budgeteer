@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>WebApi</AssemblyName>
-    <RootNamespace>Sf_Budgeteer_WebApi</RootNamespace>
+    <AssemblyName>Sf.Budgeteer.WebApi</AssemblyName>
+    <RootNamespace>Sf.Budgeteer.WebApi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

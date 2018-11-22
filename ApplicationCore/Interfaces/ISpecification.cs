@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Sf_Budgeteer_ApplicationCore.Interfaces
+namespace Sf.Budgeteer.ApplicationCore.Interfaces
 {
     public interface ISpecification<T>
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sf_Budgeteer_ApplicationCore.Entities.BudgetAggregate
+namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
 {
     public class BudgetItem : BaseEntity
     {
@@ -23,5 +23,7 @@ namespace Sf_Budgeteer_ApplicationCore.Entities.BudgetAggregate
         public decimal Amount { get; private set; }
 
         public AmountType AmountType { get; private set; }
+
+        public Budget Budget { get; set; }
     }
 }

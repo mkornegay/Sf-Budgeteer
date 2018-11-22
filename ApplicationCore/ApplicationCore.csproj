@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Sf_Budgeteer_ApplicationCore</RootNamespace>
+    <RootNamespace>Sf.Budgeteer.ApplicationCore</RootNamespace>
+    <AssemblyName>Sf.Budgeteer.ApplicationCore</AssemblyName>
   </PropertyGroup>
 
 </Project>

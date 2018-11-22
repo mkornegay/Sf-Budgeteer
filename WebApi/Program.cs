@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Sf_Budgeteer_WebApi
+namespace Sf.Budgeteer.WebApi
 {
     public class Program
     {

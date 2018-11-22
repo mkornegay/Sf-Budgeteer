@@ -1,9 +1,9 @@
-﻿using Sf_Budgeteer_ApplicationCore.Interfaces;
+﻿using Sf.Budgeteer.ApplicationCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sf_Budgeteer_ApplicationCore.Entities.BudgetAggregate
+namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
 {
     public class Budget : BaseEntity, IAggregateRoot
     {

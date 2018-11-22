@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sf_Budgeteer_ApplicationCore.Entities
+namespace Sf.Budgeteer.ApplicationCore.Entities
 {
     public enum MonthEnumeration
     {
