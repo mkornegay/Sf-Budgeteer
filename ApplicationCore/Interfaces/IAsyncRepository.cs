@@ -9,8 +9,8 @@ namespace Sf.Budgeteer.ApplicationCore.Interfaces
         Task<T> GetByIdAsync(int id);
         Task<List<T>> ListAllAsync();
         Task<List<T>> ListAsync(ISpecification<T> spec);
-        Task<T> Add(T entity);
-        Task Update(T entity);
-        Task Delete(T entity);
+        Task<T> AddAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(T entity);
     }
 }

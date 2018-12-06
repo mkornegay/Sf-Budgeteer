@@ -55,6 +55,13 @@ namespace Sf.Budgeteer.Infrastructure
 
         private void ConfigureBudgetCategory(EntityTypeBuilder<BudgetCategory> builder)
         {
+            builder.ToTable("BudgetCategory");
+
+            builder.HasKey(bc => bc.Id);
+
+            builder.Property(bc => bc.Id)
+                .UseSqlServerIdentityColumn()
+                .IsRequired();
 
         }
     }
