@@ -45,6 +45,9 @@ namespace Sf.Budgeteer.Infrastructure
 
             builder.HasKey(bi => bi.Id);
 
+            builder.Property(bi => bi.Amount)
+                .HasColumnType("decimal(19,4)");
+
             builder.Property(bi => bi.Id)
                 .UseSqlServerIdentityColumn()
                 .IsRequired();

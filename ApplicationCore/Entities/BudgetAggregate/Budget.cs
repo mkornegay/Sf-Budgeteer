@@ -1,6 +1,7 @@
 ﻿using Sf.Budgeteer.ApplicationCore.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
@@ -9,7 +10,8 @@ namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
     {
         private Budget()
         {
-            // Required by EF
+            // Required by EF if you have a public ctor 
+            //  that takes parameters
         }
 
         public Budget(MonthEnumeration budgetMonth, int budgetYear, List<BudgetItem> budgetItems)
@@ -28,5 +30,10 @@ namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
         public MonthEnumeration BudgetMonth { get; private set; }
 
         public int BudgetYear { get; private set; }
+
+        public void AddBudgetItem(decimal amount, AmountType amountType, BudgetCategory category)
+        {
+            _budgetItems.Add(new BudgetItem(amount, amountType, category));
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
 {
     public class BudgetItem : BaseEntity
     {
-        private BudgetItem()
+        public BudgetItem()
         {
             //required by EF
         }
