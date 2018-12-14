@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
 {
-    public class BudgetItem : BaseEntity
+    public class BudgetDetail : BaseEntity
     {
-        public BudgetItem()
+        private BudgetDetail()
         {
             //required by EF
         }
 
-        public BudgetItem(decimal amount, AmountType amountType, BudgetCategory category)
+        public BudgetDetail(decimal amount, AmountType amountType, BudgetCategory category)
         {
             Amount = amount;
             AmountType = amountType;

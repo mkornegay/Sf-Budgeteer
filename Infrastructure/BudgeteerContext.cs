@@ -15,15 +15,17 @@ namespace Sf.Budgeteer.Infrastructure
 
         public DbSet<Budget> Budgets { get; set; }
 
-        public DbSet<BudgetItem> BudgetItems { get; set; }
+        public DbSet<BudgetDetail> BudgetDetails { get; set; }
 
         public DbSet<BudgetCategory> BudgetCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Budget>(ConfigureBudget);
-            modelBuilder.Entity<BudgetItem>(ConfigureBudgetItem);
+            modelBuilder.Entity<BudgetDetail>(ConfigureBudgetDetail);
             modelBuilder.Entity<BudgetCategory>(ConfigureBudgetCategory);
+            modelBuilder.Entity<Transaction>(ConfigureTransaction);
+
 
         }
 
@@ -39,9 +41,9 @@ namespace Sf.Budgeteer.Infrastructure
 
         }
 
-        private void ConfigureBudgetItem(EntityTypeBuilder<BudgetItem> builder)
+        private void ConfigureBudgetDetail(EntityTypeBuilder<BudgetDetail> builder)
         {
-            builder.ToTable("BudgetItem");
+            builder.ToTable("BudgetDetail");
 
             builder.HasKey(bi => bi.Id);
 
@@ -53,7 +55,7 @@ namespace Sf.Budgeteer.Infrastructure
                 .IsRequired();
 
             builder.HasOne(b => b.Budget)
-                .WithMany(bi => bi.BudgetItems);
+                .WithMany(bi => bi.BudgetDetails);
         }
 
         private void ConfigureBudgetCategory(EntityTypeBuilder<BudgetCategory> builder)
@@ -63,6 +65,21 @@ namespace Sf.Budgeteer.Infrastructure
             builder.HasKey(bc => bc.Id);
 
             builder.Property(bc => bc.Id)
+                .UseSqlServerIdentityColumn()
+                .IsRequired();
+
+        }
+
+        private void ConfigureTransaction(EntityTypeBuilder<Transaction> builder)
+        {
+            builder.ToTable("Transaction");
+
+            builder.HasKey(t => t.Id);
+
+            builder.Property(t => t.Amount)
+                .HasColumnType("decimal(19,4)");
+
+            builder.Property(t => t.Id)
                 .UseSqlServerIdentityColumn()
                 .IsRequired();
 

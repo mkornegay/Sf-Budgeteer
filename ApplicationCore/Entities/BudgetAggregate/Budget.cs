@@ -14,18 +14,18 @@ namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
             //  that takes parameters
         }
 
-        public Budget(MonthEnumeration budgetMonth, int budgetYear, List<BudgetItem> budgetItems)
+        public Budget(MonthEnumeration budgetMonth, int budgetYear, List<BudgetDetail> budgetDetails)
         {
-            _budgetItems.AddRange(budgetItems);
+            _budgetDetails.AddRange(budgetDetails);
             BudgetMonth = budgetMonth;
             BudgetYear = budgetYear;
         }
 
-        private List<BudgetItem> _budgetItems = new List<BudgetItem>();
+        private List<BudgetDetail> _budgetDetails = new List<BudgetDetail>();
 
         // making this IReadOnlyCollection is DDD best practice so that 
         //  buget items cannot be added outside the aggregate
-        public IReadOnlyCollection<BudgetItem> BudgetItems => _budgetItems.AsReadOnly();
+        public IReadOnlyCollection<BudgetDetail> BudgetDetails => _budgetDetails.AsReadOnly();
 
         public MonthEnumeration BudgetMonth { get; private set; }
 
@@ -33,7 +33,7 @@ namespace Sf.Budgeteer.ApplicationCore.Entities.BudgetAggregate
 
         public void AddBudgetItem(decimal amount, AmountType amountType, BudgetCategory category)
         {
-            _budgetItems.Add(new BudgetItem(amount, amountType, category));
+            _budgetDetails.Add(new BudgetDetail(amount, amountType, category));
         }
     }
 }

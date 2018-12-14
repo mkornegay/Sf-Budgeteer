@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Sf.Budgeteer.ApplicationCore.Entities;
 using Sf.Budgeteer.ApplicationCore.Interfaces;
 using System;
@@ -12,10 +13,12 @@ namespace Sf.Budgeteer.Infrastructure
     public class EfRepository<T> : IAsyncRepository<T>, IRepository<T> where T : BaseEntity
     {
         private readonly BudgeteerContext _context;
+        private readonly ILogger<EfRepository<T>> _logger;
 
-        public EfRepository(BudgeteerContext context)
+        public EfRepository(BudgeteerContext context, ILogger<EfRepository<T>> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public T GetById(int id)

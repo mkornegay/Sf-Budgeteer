@@ -7,7 +7,6 @@ namespace Sf.Budgeteer.ApplicationCore.Entities
     public enum AmountType
     {
         Income = 0,
-        Expense = 1,
-        Budget = 2
+        Expense = 1
     } 
 }
