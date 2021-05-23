@@ -36,7 +36,7 @@ namespace Sf.Budgeteer.Infrastructure
             builder.HasKey(b => b.Id);
 
             builder.Property(b => b.Id)
-                .UseSqlServerIdentityColumn()
+                .UseIdentityColumn()
                 .IsRequired();
 
         }
@@ -51,7 +51,7 @@ namespace Sf.Budgeteer.Infrastructure
                 .HasColumnType("decimal(19,4)");
 
             builder.Property(bi => bi.Id)
-                .UseSqlServerIdentityColumn()
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.HasOne(b => b.Budget)
@@ -65,7 +65,7 @@ namespace Sf.Budgeteer.Infrastructure
             builder.HasKey(bc => bc.Id);
 
             builder.Property(bc => bc.Id)
-                .UseSqlServerIdentityColumn()
+                .UseIdentityColumn()
                 .IsRequired();
 
         }
@@ -80,7 +80,7 @@ namespace Sf.Budgeteer.Infrastructure
                 .HasColumnType("decimal(19,4)");
 
             builder.Property(t => t.Id)
-                .UseSqlServerIdentityColumn()
+                .UseIdentityColumn()
                 .IsRequired();
 
         }

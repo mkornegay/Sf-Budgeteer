@@ -5,5 +5,7 @@ using System.Text;
 namespace Sf.Budgeteer.ApplicationCore.Interfaces
 {
     public interface IAggregateRoot
-    {}
+    {
+        //marker interface
+    }
 }

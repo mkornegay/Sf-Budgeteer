@@ -26,7 +26,7 @@ namespace Sf.Budgeteer.Infrastructure
             return _context.Set<T>().Find(id);
         }
 
-        public Task<T> GetByIdAsync(int id)
+        public ValueTask<T> GetByIdAsync(int id)
         {
             return _context.Set<T>().FindAsync(id);
         }
